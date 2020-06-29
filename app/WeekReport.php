@@ -11,4 +11,9 @@ class WeekReport extends Model
       'fecha_inicio',
         'fecha_final',
     ];
+
+
+    public function summaries(){
+        return $this->hasMany('App\FirstSummary');
+    }
 }

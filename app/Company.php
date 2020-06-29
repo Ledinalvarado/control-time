@@ -17,4 +17,8 @@ class Company extends Model
     public function department_formats(){
         return $this->belongsToMany('App\DepartmentFormat');
     }
+
+    public function summaries(){
+        return $this->hasMany('App\FirstSummary');
+    }
 }

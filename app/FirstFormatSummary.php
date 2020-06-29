@@ -15,6 +15,11 @@ class FirstFormatSummary extends Model
         return $this->belongsTo('App\DepartmentFormat');
     }
 
+    //A format can has many FirstSummaries
+    public function firstSummaries(){
+        return $this->hasMany('App\FirstSummary');
+    }
+
     public function categoryFirstSummary(){
         return $this->belongsToMany('App\Category');
     }

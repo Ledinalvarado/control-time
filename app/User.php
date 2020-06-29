@@ -19,6 +19,10 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public function summaries(){
+        return $this->hasMany('App\FirstSummary');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

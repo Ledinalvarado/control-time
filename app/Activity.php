@@ -15,4 +15,8 @@ class Activity extends Model
     public function category_activities(){
         return $this->belongsTo('App\Category');
     }
+
+    public function activity_work_hours(){
+        return $this->hasMany('App\WorkHour');
+    }
 }
