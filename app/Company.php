@@ -21,4 +21,8 @@ class Company extends Model
     public function summaries(){
         return $this->hasMany('App\FirstSummary');
     }
+
+    public function budgetHour(){
+        return $this->hasMany('App\BudgetHour');
+    }
 }
