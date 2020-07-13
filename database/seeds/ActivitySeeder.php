@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Activity;
 class ActivitySeeder extends Seeder
 {
     /**
@@ -11,6 +11,16 @@ class ActivitySeeder extends Seeder
      */
     public function run()
     {
-        //
+        Activity::create([
+           'name' => 'Actividad1',
+           'category_id' => 2,
+           'tipo_actividad' => 'CARGABLE',
+        ]);
+
+        Activity::create([
+            'name' => 'Actividad2',
+            'category_id' => 1,
+            'tipo_actividad' => 'CARGABLE',
+        ]);
     }
 }

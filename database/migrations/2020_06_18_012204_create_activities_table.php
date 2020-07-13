@@ -19,6 +19,8 @@ class CreateActivitiesTable extends Migration
 
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+
+            $table->string('tipo_actividad')->default(\App\Activity::CARGABLE);
             $table->timestamps();
         });
     }

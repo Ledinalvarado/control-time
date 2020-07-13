@@ -19,8 +19,9 @@ class CreateTimeComparisonsTable extends Migration
             $table->bigInteger('second_summary_id')->unsigned();
             $table->foreign('second_summary_id')->references('id')->on('second_summaries')->onDelete('cascade');
 
-            $table->bigInteger('time_comparison_id')->unsigned();
-            $table->foreign('time_comparison_id')->references('id')->on('time_comparisons')->onDelete('cascade');
+//            debe hacerse de nuevo las migraciones por esta tabla, no debe llevar esta llave foranea a si misma
+//            $table->bigInteger('time_comparison_id')->unsigned();
+//            $table->foreign('time_comparison_id')->references('id')->on('time_comparisons')->onDelete('cascade');
 
             $table->timestamps();
         });

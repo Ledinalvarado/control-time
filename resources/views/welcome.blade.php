@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@foreach($categorias as $categoria)
+    <h2>{{$categoria->name}}</h2>
+@endforeach
 {{--    <!DOCTYPE html>--}}
 {{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
 {{--    <head>--}}

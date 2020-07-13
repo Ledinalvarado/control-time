@@ -14,7 +14,13 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+//        $categorias = Category::all();
+//        return view('welcome')->with(compact('categorias'));
+
+        $categorias = Category::orderBy('department_format_id', 'asc')->get();
+//        return view('welcome')->with(compact('categorias'));
+    return response()->json($categorias);
+
     }
 
     /**
